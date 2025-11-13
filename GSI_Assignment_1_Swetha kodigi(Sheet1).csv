@@ -1,0 +1,102 @@
+Test case ID,Module,Test Scenario,Test Steps,Tested Environment,Test Data,Actual Output,Expected Output,Remarks,Status,,,,,,,,,,,,,,,,
+TC001,Login,Validate login with valid credentials,"1. Open the Application URL
+2. Enter the user name as mngr645587
+3. Enter the password as dAhujaj
+4. Click on the LOGIN button
+5. Navigate to Home page",https://demo.guru99.com/V4/manager/Managerhomepage.php,"User name : mnanager
+PAssword : dhanu231@",User should successfully log in and navigate to Home page,User should successfully log in and navigate to Home page,Test case is passed,Pass,,,,,,,,,,,,,,,,
+TC002,Login,Validate login with invalid credentials,"1. Open the Application URL
+2. Enter the user name as mngr645588
+3. Enter the password as dAhujaj
+4. Click on the LOGIN Button",https://demo.guru99.com/V4/manager/Managerhomepage.php,"User name : mngr645588
+PAssword : dAhujaj",User or Password is not valid,User or Password is not valid,Test case is passed,Pass,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+TC003, New Customer,Verify new customer creation with valid details,"1. Open the Application URL
+2. Login to the application
+3. Enter User name and password
+4. Click on LOGIN Button 
+5. User will navigate to home page
+6. Click On the New Customer option 
+7. Enter the all Customer details
+8. Then Click on Submit button
+9. User will navigate to Customer details page",https://demo.guru99.com/V4/manager/addcustomerpage.php,"Customer Name : Swetha kodigi
+Gender: Female
+DOB : 
+Addrees : k.k colony
+City : anantapur
+State : andhra pradesh
+PIN: 515004
+Mobile Number : 9502548146
+E-mail : swethayadav24125@gmail.com
+Password : swetha123","Customer Registered Successfully and Registered Customer details are displayed
+
+","Customer Registered Successfully and Registered Customer details are displayed
+
+",Test case is Passed,Pass,,,,,,,,,,,,,,,,
+TC004, New Customer,Verify error message for mandatory fields left blank,"1. Open the Application URL
+2. Login to the application
+3. Enter User name and password
+4. Click on LOGIN Button 
+5. User will navigate to home page
+6. Click On the New Customer option 
+7. Enter the Customer details and leave any field blank
+8. Then Click on Submit button
+9. User will get error message like ""please fill all fields"".",https://demo.guru99.com/V4/manager/addcustomerpage.php,"Customer Name : Swetha kodigi
+Gender: Female
+DOB : 
+Addrees : k.k colony
+City : anantapur
+State : andhra pradesh
+PIN: 515004
+Mobile Number : 9502548146
+E-mail : swethayadav24125@gmail.com
+Password : swetha123",System should display validation message for required fields,System should display validation message for required fields,Test case is failed,Failed,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+TC005,Edit Customer,Verify editing existing customer details,"1. Open the Application URL
+2. Login to the application
+3. Enter User name and password
+4. Click on LOGIN Button 
+5. User will navigate to home page
+6. Click On the Edit Customer option 
+7. User will navigate to Edit Customer Form 
+8. Enter the valid Customer ID
+9. And Click on Submit Button
+10. User will navigate to Edit Cutomer page with details
+11. Modify E-mail id or any data and then click on Submit button",https://demo.guru99.com/V4/manager/EditCustomer.php,"Customer ID : 63406
+Email ID : shobhanjaladurga@gmail.com",Customer details should update successfully with confirmation message,Customer details should update successfully with confirmation message,Test case is passed,Pass,,,,,,,,,,,,,,,,
+TC006,Edit Customer,Validate error for invalid Customer ID while editing,"1. Open the Application URL
+2. Login to the application
+3. Enter User name and password
+4. Click on LOGIN Button 
+5. User will navigate to home page
+6. Click On the Edit Customer option 
+7. User will navigate to Edit Customer Form 
+8. Enter the invalid Customer ID
+9. And Click on Submit Button
+10. User will get error message like ""Customer does not exist!!"".",https://demo.guru99.com/V4/manager/editCustomerPage.php,Customer ID : 99999,System should show 'Customer does not exist' message,System should show 'Customer does not exist' message,Test case failed,Failed,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+TC007,New Account,Verify new Account creation with valid details,"1. Open the Application URL
+2. Login to the application
+3. Enter User name and password
+4. Click on LOGIN Button 
+5. User will navigate to home page
+6. Click On the New Account option 
+7. Enter Customer ID as 63406
+8. Select Account type
+9. Add initial diposit amount
+9. And Click on Submit Button
+",https://demo.guru99.com/V4/manager/addAccount.php,"Customer id : 6213
+Account Type: Savings
+Initial Deposit : 5000",The system should navigate to https://demo.guru99.com/V4/manager/insertAccount.php,The system should navigate to https://demo.guru99.com/V4/manager/insertAccount.php,Test case is pass,Pass,,,,,,,,,,,,,,,,
+TC008,New Account,Verify new Account creation with invalid details,"1. Open the Application URL
+2. Login to the application
+3. Enter User name and password
+4. Click on LOGIN Button 
+5. User will navigate to home page
+6. Click On the New Account option 
+7. Enter invalid Customer ID as 63406
+8. Select Account type
+9. Left initial diposit field empty
+9. And Click on Submit Button",https://demo.guru99.com/V4/manager/addAccount.php,"Customer id : 6213
+Account Type: Savings
+Initial Deposit : 5000","The system should show error message as ""Please fill all fields""","The system should show error message as ""Please fill all fields""",Test case is failed,Failed,,,,,,,,,,,,,,,,
